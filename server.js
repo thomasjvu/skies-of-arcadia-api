@@ -87,15 +87,15 @@ app.use(cors())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirName + '/index.html')
+    res.sendFile(__dirname + '/index.html')
 })
 
 app.get('/public/main.js', (req, res) => {
-    res.sendFile(__dirName + '/public/main.js')
+    res.sendFile(__dirname + '/public/main.js')
 })
 
 app.get('/public/style.css', (req, res) => {
-    res.sendFile(__dirName + '/public/style.css')
+    res.sendFile(__dirname + '/public/style.css')
 })
 
 
