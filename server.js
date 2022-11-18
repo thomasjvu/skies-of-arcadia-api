@@ -119,11 +119,6 @@ app.get("/public/img/wallpaper.jpg", (req, res) => {
     res.sendFile(__dirname + "/public/img/wallpaper.jpg");
 });
 
-// get fonts
-app.get("/public/font/UnifrakturCook.ttf", (req, res) => {
-    res.sendFile(__dirname + "/public/font/UnifrakturCook.ttf");
-});
-
 app.get("/public/font/PirataOne.ttf", (req, res) => {
     res.sendFile(__dirname + "/public/font/PirataOne.ttf");
 });
