@@ -103,7 +103,7 @@ app.get('/api', (req, res) => {
     res.json(skiesOfArcadia)
 })
 
-app.get('/api/:character', (req, res) => {
+app.get('/api/characters/:character', (req, res) => {
     const character = req.params.character.toLowerCase()
     if (skiesOfArcadia[character]){
         res.json(skiesOfArcadia[character])
