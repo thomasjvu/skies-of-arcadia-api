@@ -9,6 +9,7 @@ async function getCharacter() {
         const data = await res.json()
         console.log(data)
         document.querySelector('h3').innerText = data.characters.name
+        document.querySelector('#jp').innerText = data.characters.nameJP
     } catch(error) {
         console.log(error)
     }
