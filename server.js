@@ -84,19 +84,37 @@ const characters = {
 app.use(cors())
 app.use(express.static('public'))
 
+// get files
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/public/main.js', (req, res) => {
-    res.sendFile(__dirname + '/public/main.js')
+app.get('/public/js/main.js', (req, res) => {
+    res.sendFile(__dirname + '/public/js/main.js')
 })
 
-app.get('/public/style.css', (req, res) => {
-    res.sendFile(__dirname + '/public/style.css')
+app.get('/public/css/style.css', (req, res) => {
+    res.sendFile(__dirname + '/public/css/style.css')
 })
 
+app.get('/public/img/wallpaper.jpg', (req, res) => {
+    res.sendFile(__dirname + '/public/img/wallpaper.jpg')
+})
 
+// get fonts
+app.get('/public/font/UnifrakturCook.ttf', (req, res) => {
+    res.sendFile(__dirname + '/public/font/UnifrakturCook.ttf')
+})
+
+app.get('/public/font/PirataOne.ttf', (req, res) => {
+    res.sendFile(__dirname + '/public/font/PirataOne.ttf')
+})
+
+app.get('/public/font/AzeretMono.ttf', (req, res) => {
+    res.sendFile(__dirname + '/public/font/AzeretMono.ttf')
+})
+
+// get api
 app.get('/api/characters', (req, res) => {
     res.json(characters)
 })

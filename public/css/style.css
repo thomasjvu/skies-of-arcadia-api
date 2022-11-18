@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../img/wallpaper.jpg');
+    background-size: cover;
+    font-size: 62.5%;
+    font-family: 'Azeret Mono', monospace;
+}
+
+h1 {
+    font-family: Pirata One;
+    font-size: 4.5rem;
+    text-align: center;
+    letter-spacing: 4px;
+}
+h2 {
+    text-align: center;
+    font-size: 1.25rem;
+}
+p {
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Azeret Mono', monospace;
+}
+
+/**
+ * Layout
+ **/
+main,
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-left: 10%
+}
+
+footer {
+    text-align: center;
+}
+
+/* Decoration */
+.separator {
+    border-bottom: 5px solid black;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    background: #bae1de;
+    border: 1px solid white;
+    font-family: 'Azeret Mono', monospace;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+button {
+    width: 100%;
+    margin: 10px 0px;
+    font-family: 'Azeret Mono', monospace;
+}
