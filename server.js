@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 
 const PORT = 3000;
+const LINK = `localhost:3000`
 
 app.use(cors());
 
@@ -147,4 +148,5 @@ app.get("/api/characters/:character", (req, res) => {
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is now running at Port ${PORT}`);
+    console.log(`You can access it at the following link: ${LINK}`);
 });

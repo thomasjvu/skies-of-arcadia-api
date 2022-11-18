@@ -8,7 +8,7 @@ async function getCharacter() {
         const res = await fetch(`https://skies-of-arcadia.cyclic.app/api/characters/${character}`)
         const data = await res.json()
         console.log(data)
-        document.querySelector('h3').innerText = data.name
+        document.querySelector('h3').innerText = data.characters.name
     } catch(error) {
         console.log(error)
     }
