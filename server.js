@@ -105,10 +105,10 @@ app.get('/api', (req, res) => {
 
 app.get('/api/:character', (req, res) => {
     const character = req.params.character.toLowerCase()
-    if (characters[character]){
-        res.json(characters[character])
+    if (skiesOfArcadia[character]){
+        res.json(skiesOfArcadia[character])
     } else {
-        res.json(characters['unknown'])
+        res.json(skiesOfArcadia['unknown'])
     }
 })
 
