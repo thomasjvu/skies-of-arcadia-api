@@ -10,6 +10,6 @@ async function getCharacter() {
         console.log(data)
         document.querySelector('h3').innerText = data.name
     } catch(error) {
-        console.log('error')
+        console.log(error)
     }
 }
