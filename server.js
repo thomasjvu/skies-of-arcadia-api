@@ -110,6 +110,6 @@ app.get('/api/characters/:character', (req, res) => {
     }
 })
 
-app.listen(PORT, (req, res) => {
+app.listen(process.env.PORT || PORT, (req, res) => {
     console.log(`The server is now running at Port ${PORT}`)
 })
