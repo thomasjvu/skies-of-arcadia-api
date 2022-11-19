@@ -119,6 +119,10 @@ app.get("/public/img/wallpaper.jpg", (req, res) => {
     res.sendFile(__dirname + "/public/img/wallpaper.jpg");
 });
 
+app.get("/public/img/favicon.ico", (req, res) => {
+    res.sendFile(__dirname + "/public/img/favicon.ico");
+});
+
 app.get("/public/font/PirataOne.ttf", (req, res) => {
     res.sendFile(__dirname + "/public/font/PirataOne.ttf");
 });
