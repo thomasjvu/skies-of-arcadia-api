@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 
 const PORT = 3000;
-const LINK = `localhost:3000`;
+const LINK = `http://localhost:3000`;
 
 app.use(cors());
 

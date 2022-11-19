@@ -8,8 +8,10 @@ async function getCharacter() {
         const res = await fetch(`/api/characters/${character}`)
         const data = await res.json()
         console.log(data)
-        document.querySelector('h3').innerText = data.name
-        document.querySelector('#jp').innerText = data.nameJP
+        document.querySelector('#name').innerText = data.name
+        document.querySelector('#nameJP').innerText = data.nameJP
+        document.querySelector('#type').innerText = data.type
+        document.querySelector('#age').innerText = data.age
     } catch(error) {
         console.log(error)
     }
