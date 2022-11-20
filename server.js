@@ -100,6 +100,8 @@ const characters = {
     },
 };
 
+const discoveries = {};
+
 app.use(express.static("public"));
 
 // get files
@@ -107,31 +109,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/public/js/main.js", (req, res) => {
-    res.sendFile(__dirname + "/public/js/main.js");
-});
-
-app.get("/public/css/style.css", (req, res) => {
-    res.sendFile(__dirname + "/public/css/style.css");
-});
-
-app.get("/public/img/wallpaper.jpg", (req, res) => {
-    res.sendFile(__dirname + "/public/img/wallpaper.jpg");
-});
-
-app.get("/public/img/favicon.ico", (req, res) => {
-    res.sendFile(__dirname + "/public/img/favicon.ico");
-});
-
-app.get("/public/font/PirataOne.ttf", (req, res) => {
-    res.sendFile(__dirname + "/public/font/PirataOne.ttf");
-});
-
-app.get("/public/font/AzeretMono.ttf", (req, res) => {
-    res.sendFile(__dirname + "/public/font/AzeretMono.ttf");
-});
-
-// get api
+// get api (characters)
 app.get("/api/characters", (req, res) => {
     res.json(characters);
 });
@@ -144,6 +122,8 @@ app.get("/api/characters/:character", (req, res) => {
         res.json(characters["unknown"]);
     }
 });
+
+// get api (discoveries)
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is now running at Port ${PORT}`);
